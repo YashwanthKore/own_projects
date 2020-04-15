@@ -1,0 +1,41 @@
+.container {
+  margin: auto;
+  text-align: center;
+}
+.container h1{
+    font-size: 60px;
+    font-family: 'Cabin Sketch';
+    background-color: black;
+    color: white;
+}
+.diceDiv{
+  display: inline-block;
+  padding: 30px 0px 60px 20px;
+}
+.diceDiv legend{
+    font-size: 45px;
+    color: white;
+    background-color: black;
+    font-family: 'Fredericka the Great';
+}
+.diceDiv img{
+    width: 150px;
+}
+button{
+    padding: 15px;
+    font-size: 25px;
+    background-color: rgb(8, 8, 8);
+    color: white;
+    font-family: 'Fredericka the Great';
+}
+.dices{
+  background-image: url("https://img5.goodfon.com/wallpaper/nbig/5/e5/material-design-linii-background-fon.jpg");  
+}
+h2{
+  font-size: 35px;
+  background-image:url("https://www.hdwallpaper.nu/wp-content/uploads/2016/12/dice-16.jpg");
+  font-family: 'Cabin Sketch';
+}
+fieldset{
+  background-color:black;
+}
