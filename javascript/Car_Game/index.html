@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Game</title>
+    <style>
+        .rules{
+            display: none;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="gameContainer">
+      <div class="score"></div>
+      <div class="startBox">
+        <p>
+          Tap Here to Start <br />
+          Use Arrows to Move
+        </p>
+      </div>
+      <div class="roadArea rules">car here</div>
+    </div>
+
+    <script>
+        var score = document.querySelector(".score")
+        var startBox = document.querySelector(".startBox")
+        var roadArea = document.querySelector(".roadArea")
+        var arrowkeys ={
+            ArrowUp:false,
+            ArrowDown:false,
+            ArrowRight:false,
+            ArrowLeft:false            
+        }
+        document.addEventListener("keyup",keyUp)
+        document.addEventListener("keydown",keyDown)
+        startBox.addEventListener("click",startGame)
+
+        function keyUp(e){
+          e.preventDefault()
+          arrowkeys[e.key] = true
+          console.log(arrowkeys)
+        }
+
+        function keyDown(e){
+          e.preventDefault() 
+          arrowkeys[e.key] = false
+        }
+
+        function startGame(){
+            roadArea.classList.remove("rules")
+            startBox.classList.add("rules")
+            window.requestAnimationFrame(playGame)
+        }
+        function playGame(){
+            console.log("car here")
+            window.requestAnimationFrame(playGame)
+        } 
+    </script>
+  </body>
+</html>
+ 
