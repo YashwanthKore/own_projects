@@ -8,6 +8,14 @@
         .rules{
             display: none;
         }
+        .car{
+          height: 150px;
+          width: 100px;
+          background: tomato;
+          position: absolute;
+          left: 100px;
+          bottom: 60px;
+        }
     </style>
   </head>
   <body>
@@ -38,19 +46,22 @@
 
         function keyUp(e){
           e.preventDefault()
-          arrowkeys[e.key] = true
+          arrowkeys[e.key] = false
           console.log(arrowkeys)
         }
 
         function keyDown(e){
           e.preventDefault() 
-          arrowkeys[e.key] = false
+          arrowkeys[e.key] = true
         }
 
         function startGame(){
             roadArea.classList.remove("rules")
             startBox.classList.add("rules")
             window.requestAnimationFrame(playGame)
+            var car = document.createElement('div')
+            car.setAttribute("class","car")
+            roadArea.appendChild(car)
         }
         function playGame(){
             console.log("car here")
